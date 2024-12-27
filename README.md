@@ -13,5 +13,4 @@ Looking into the sharebike data from three US cities, Washington, New York City 
 bikeshare_2.py
 
 ### Credits
-Myself
-
+Stackoverflow and myself
