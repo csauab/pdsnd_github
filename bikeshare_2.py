@@ -1,10 +1,9 @@
 import time
 import pandas as pd
-import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+              'washington': 'washington.csv' }  
 
 def get_filters():
     """
@@ -61,8 +60,8 @@ def load_data(city, month, day):
     
     if month != 'all':
         months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
-        df = df[df['Start Time'].dt.month == month]
+        month_number = months.index(month) + 1
+        df = df[df['Start Time'].dt.month == month_number]
     
     if day != 'all':
         df = df[df['Start Time'].dt.day_name() == day.title()]
